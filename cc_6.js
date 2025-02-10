@@ -63,3 +63,15 @@ function convertCurrency(amount, exchangeRate) {
 // Test cases for currency conversion
 convertCurrency(100, 1.1); 
 convertCurrency(250, 0.85);
+
+//Task 6: Higher-Order Function for Bulk Orders 
+// Function to apply bulk discount on orders above $500
+function applyBulkDiscount(orders, discountFunction) {
+    let discountedOrders = orders.map(discountFunction);
+    console.log(discountedOrders);
+    return discountedOrders;
+}
+// Array of order amounts
+let orders = [200, 600, 1200, 450, 800];
+// Applying the discount using a higher-order function
+applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
