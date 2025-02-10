@@ -64,6 +64,7 @@ function convertCurrency(amount, exchangeRate) {
 convertCurrency(100, 1.1); 
 convertCurrency(250, 0.85);
 
+
 //Task 6: Higher-Order Function for Bulk Orders 
 // Function to apply bulk discount on orders above $500
 function applyBulkDiscount(orders, discountFunction) {
@@ -75,3 +76,19 @@ function applyBulkDiscount(orders, discountFunction) {
 let orders = [200, 600, 1200, 450, 800];
 // Applying the discount using a higher-order function
 applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+
+
+//Task 7: Business Expense Tracker ===
+// Function that returns another function to keep track of expenses
+function createExpenseTracker() {
+    let totalExpenses = 0;
+    return function(expense) {
+        totalExpenses += expense;
+        console.log(`Total Expenses: $${totalExpenses}`);
+        return totalExpenses;
+    };
+}
+// Creating an expense tracker instance and adding expenses
+let tracker = createExpenseTracker();
+tracker(200); 
+tracker(150);
