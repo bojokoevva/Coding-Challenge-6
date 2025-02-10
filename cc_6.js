@@ -33,5 +33,21 @@ const calculateBonus = (salary, performanceRating) => {
 };
 // Test cases for bonus calculation
 calculateBonus(5000, "Excellent"); 
-calculateBonus(7000, "Good");    
+calculateBonus(7000, "Good"); 
+
+//Task 4: Subscription Pricing Model 
+// Function to calculate subscription cost based on plan, months, and optional discount
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let costPerMonth = 0;
+    if (plan === "Basic") costPerMonth = 10;
+    else if (plan === "Premium") costPerMonth = 20;
+    else if (plan === "Enterprise") costPerMonth = 50;
+
+    let totalCost = (costPerMonth * months) - discount;
+    console.log(`Total Cost: $${totalCost}`);
+    return totalCost;
+}
+// Test cases for subscription cost calculation
+calculateSubscriptionCost("Basic", 6, 10);
+calculateSubscriptionCost("Premium", 12, 0);
 
