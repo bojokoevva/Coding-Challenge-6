@@ -35,6 +35,7 @@ const calculateBonus = (salary, performanceRating) => {
 calculateBonus(5000, "Excellent"); 
 calculateBonus(7000, "Good"); 
 
+
 //Task 4: Subscription Pricing Model 
 // Function to calculate subscription cost based on plan, months, and optional discount
 function calculateSubscriptionCost(plan, months, discount = 0) {
@@ -51,3 +52,14 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
 calculateSubscriptionCost("Basic", 6, 10);
 calculateSubscriptionCost("Premium", 12, 0);
 
+
+//Task 5: Currency Conversion ===
+// Function to convert currency based on amount and exchange rate
+function convertCurrency(amount, exchangeRate) {
+    let convertedAmount = (amount * exchangeRate).toFixed(2);
+    console.log(`Converted Amount: $${convertedAmount}`);
+    return convertedAmount;
+}
+// Test cases for currency conversion
+convertCurrency(100, 1.1); 
+convertCurrency(250, 0.85);
