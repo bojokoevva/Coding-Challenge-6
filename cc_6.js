@@ -20,3 +20,18 @@ const calculateSalesTax = function(amount, taxRate) {
         // Test cases for sales tax calculation
         calculateSalesTax(100, 0.07); 
         calculateSalesTax(500, 0.1);
+
+//Task 3: Employee Bonus Calculation
+// Arrow function to calculate bonus based on performance rating
+const calculateBonus = (salary, performanceRating) => {
+    let bonus = 0;
+    if (performanceRating === "Excellent") bonus = salary * 0.2;
+    else if (performanceRating === "Good") bonus = salary * 0.1;
+    else if (performanceRating === "Average") bonus = salary * 0.05;
+    console.log(`Bonus: $${bonus}`);
+    return bonus;
+};
+// Test cases for bonus calculation
+calculateBonus(5000, "Excellent"); 
+calculateBonus(7000, "Good");    
+
