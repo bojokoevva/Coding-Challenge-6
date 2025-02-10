@@ -92,3 +92,20 @@ function createExpenseTracker() {
 let tracker = createExpenseTracker();
 tracker(200); 
 tracker(150);
+
+
+//Task 8: Employee Promotion Evaluation 
+// Recursive function to calculate years to reach level 10
+function calculateYearsToPromotion(employeeLevel) {
+    if (employeeLevel >= 10) {
+        console.log("Years to Level 10: 0");
+        return 0;
+    } else {
+        let years = 2 + calculateYearsToPromotion(employeeLevel + 1);
+        console.log(`Years to Level 10: ${years}`);
+        return years;
+    }
+}
+// Test cases for promotion evaluation
+calculateYearsToPromotion(7); 
+calculateYearsToPromotion(5);
